@@ -2,7 +2,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   /* Cache Components (PPR in Next.js 16) */
-  cacheComponents: true,
+  // Disabled untuk template karena conflict dengan dynamic routes
+  // Enable setelah Supabase configured
+  // cacheComponents: true,
 
   /* Experimental Features */
   experimental: {

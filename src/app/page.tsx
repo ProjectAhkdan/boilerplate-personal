@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Button, Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/shared/ui';
 
 export default function HomePage() {
@@ -7,18 +8,21 @@ export default function HomePage() {
         <CardHeader>
           <CardTitle>Portfolio Boilerplate</CardTitle>
           <CardDescription>
-            Next.js 16 + Supabase + FSD Architecture — Tahap 2 Complete
+            Next.js 16 + Supabase + FSD Architecture — Tahap 3 Complete
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <p className="text-sm text-muted-foreground">
-            Shared foundation siap: design tokens, UI primitives, env helper, Supabase client, error
-            classes, logger, dan utilities.
+            Domain referensi <strong>Project</strong> end-to-end selesai: migration + RLS, entities,
+            repository, views, routes. Siap sebagai pola untuk entity lain.
           </p>
           <div className="flex gap-2">
-            <Button variant="primary">Primary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="ghost">Ghost</Button>
+            <Button asChild variant="primary">
+              <Link href="/projects">View Projects</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/projects/portfolio-boilerplate">Sample Project</Link>
+            </Button>
           </div>
         </CardContent>
       </Card>
