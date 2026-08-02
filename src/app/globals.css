@@ -1,15 +1,88 @@
 /* Tailwind CSS v4 - CSS-first configuration */
 @import 'tailwindcss';
 
-/* Design Tokens (akan diisi lengkap di Tahap 2) */
+/* Design Tokens */
 @theme {
-  /* Colors - placeholder, akan diperluas */
-  --color-background: #ffffff;
-  --color-foreground: #000000;
-
-  /* Spacing - menggunakan default Tailwind 4 */
+  /* ==================== COLORS ==================== */
   
-  /* Typography - akan dikonfigurasi dengan design system */
+  /* Brand Colors */
+  --color-primary: oklch(0.6 0.2 250); /* Brand blue */
+  --color-primary-foreground: oklch(1 0 0); /* White text on primary */
+  
+  /* Neutral Colors */
+  --color-background: oklch(1 0 0); /* Pure white */
+  --color-foreground: oklch(0.15 0 0); /* Near black text */
+  --color-muted: oklch(0.96 0 0); /* Light gray bg */
+  --color-muted-foreground: oklch(0.45 0 0); /* Muted text */
+  --color-border: oklch(0.9 0 0); /* Light border */
+  
+  /* Semantic Colors */
+  --color-success: oklch(0.65 0.15 145); /* Green */
+  --color-success-foreground: oklch(1 0 0);
+  --color-warning: oklch(0.75 0.15 85); /* Yellow */
+  --color-warning-foreground: oklch(0.2 0 0);
+  --color-error: oklch(0.6 0.2 25); /* Red */
+  --color-error-foreground: oklch(1 0 0);
+  --color-info: oklch(0.65 0.15 230); /* Blue */
+  --color-info-foreground: oklch(1 0 0);
+  
+  /* Component Colors */
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.15 0 0);
+  --color-input: oklch(1 0 0);
+  --color-input-border: oklch(0.85 0 0);
+  --color-ring: oklch(0.6 0.2 250); /* Focus ring = primary */
+  
+  /* ==================== SPACING ==================== */
+  /* Menggunakan Tailwind default (0, 0.5, 1, 1.5, 2, 2.5, 3, dst.) */
+  /* Custom spacing kalau diperlukan nanti */
+  
+  /* ==================== TYPOGRAPHY ==================== */
+  
+  /* Font Families */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+  
+  /* Font Sizes (fluid typography) */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* ==================== ANIMATIONS ==================== */
+  
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+  
+  /* Easings */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* ==================== RADII ==================== */
+  --radius-sm: 0.25rem;  /* 4px */
+  --radius-md: 0.5rem;   /* 8px */
+  --radius-lg: 0.75rem;  /* 12px */
+  --radius-xl: 1rem;     /* 16px */
+  --radius-full: 9999px; /* Fully rounded */
+  
+  /* ==================== SHADOWS ==================== */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 /* Global Styles */
@@ -37,8 +110,17 @@ a {
 
 /* Dark mode preparation */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
+  @theme {
+    /* Dark mode colors */
+    --color-background: oklch(0.12 0 0); /* Near black */
+    --color-foreground: oklch(0.95 0 0); /* Off white */
+    --color-muted: oklch(0.18 0 0); /* Dark gray bg */
+    --color-muted-foreground: oklch(0.65 0 0); /* Muted text */
+    --color-border: oklch(0.25 0 0); /* Dark border */
+    
+    --color-card: oklch(0.15 0 0);
+    --color-card-foreground: oklch(0.95 0 0);
+    --color-input: oklch(0.15 0 0);
+    --color-input-border: oklch(0.3 0 0);
   }
 }
