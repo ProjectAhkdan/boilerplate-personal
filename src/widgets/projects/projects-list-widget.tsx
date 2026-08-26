@@ -1,14 +1,14 @@
 import type { Project } from '@/entities/project';
 import { ProjectCard } from '@/entities/project';
 
-interface ProjectsListViewProps {
+interface ProjectsListWidgetProps {
   projects: Project[];
 }
 
 /**
- * ProjectsListView - View untuk menampilkan list projects
+ * ProjectsListWidget - Widget to display list of projects
  */
-export function ProjectsListView({ projects }: ProjectsListViewProps) {
+export function ProjectsListWidget({ projects }: ProjectsListWidgetProps) {
   if (projects.length === 0) {
     return (
       <div className="flex min-h-[400px] items-center justify-center">

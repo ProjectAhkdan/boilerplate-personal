@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import { ProjectRepository } from '@/entities/project';
 import { createServerClient } from '@/shared/api/supabase';
 import { NotFoundError } from '@/shared/lib';
-import { ProjectDetailView } from '@/views/projects';
+import { ProjectDetailWidget } from '@/widgets/projects';
 
 // Force dynamic rendering (skip static generation untuk template)
 export const dynamic = 'force-dynamic';
@@ -34,7 +34,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
     return (
       <div className="container mx-auto px-4 py-12">
-        <ProjectDetailView project={project} />
+        <ProjectDetailWidget project={project} />
       </div>
     );
   } catch (error) {

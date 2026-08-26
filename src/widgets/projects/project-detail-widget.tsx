@@ -5,14 +5,14 @@ import type { Project } from '@/entities/project';
 import { formatDate } from '@/shared/lib';
 import { Button } from '@/shared/ui';
 
-interface ProjectDetailViewProps {
+interface ProjectDetailWidgetProps {
   project: Project;
 }
 
 /**
- * ProjectDetailView - View untuk menampilkan detail project
+ * ProjectDetailWidget - Widget to display project details
  */
-export function ProjectDetailView({ project }: ProjectDetailViewProps) {
+export function ProjectDetailWidget({ project }: ProjectDetailWidgetProps) {
   return (
     <article className="mx-auto max-w-4xl">
       {/* Header */}

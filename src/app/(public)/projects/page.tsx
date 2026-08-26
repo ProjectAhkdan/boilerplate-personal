@@ -1,6 +1,6 @@
 import { ProjectRepository } from '@/entities/project';
 import { createServerClient } from '@/shared/api/supabase';
-import { ProjectsListView } from '@/views/projects';
+import { ProjectsListWidget } from '@/widgets/projects';
 
 /**
  * Projects List Page
@@ -22,7 +22,7 @@ export default async function ProjectsPage() {
         </p>
       </header>
 
-      <ProjectsListView projects={projects} />
+      <ProjectsListWidget projects={projects} />
     </div>
   );
 }
