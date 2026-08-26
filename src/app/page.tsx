@@ -17,12 +17,12 @@ export default function HomePage() {
             repository, views, routes. Siap sebagai pola untuk entity lain.
           </p>
           <div className="flex gap-2">
-            <Button asChild variant="primary">
-              <Link href="/projects">View Projects</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link href="/projects/portfolio-boilerplate">Sample Project</Link>
-            </Button>
+            <Link href="/projects">
+              <Button variant="primary">View Projects</Button>
+            </Link>
+            <Link href="/projects/portfolio-boilerplate">
+              <Button variant="outline">Sample Project</Button>
+            </Link>
           </div>
         </CardContent>
       </Card>

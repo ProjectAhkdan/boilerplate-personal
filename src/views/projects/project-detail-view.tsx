@@ -46,19 +46,17 @@ export function ProjectDetailView({ project }: ProjectDetailViewProps) {
       {(project.demo_url || project.github_url) && (
         <div className="mb-8 flex gap-4">
           {project.demo_url && (
-            <Button asChild variant="primary">
-              <Link href={project.demo_url} target="_blank" rel="noopener noreferrer">
+            <Link href={project.demo_url} target="_blank" rel="noopener noreferrer">
+              <Button variant="primary">
                 <ExternalLink className="h-4 w-4" />
                 Live Demo
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           {project.github_url && (
-            <Button asChild variant="outline">
-              <Link href={project.github_url} target="_blank" rel="noopener noreferrer">
-                GitHub
-              </Link>
-            </Button>
+            <Link href={project.github_url} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline">GitHub</Button>
+            </Link>
           )}
         </div>
       )}
