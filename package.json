@@ -1,9 +1,9 @@
 {
-  "name": "portfolio-boilerplate",
-  "version": "0.1.0",
+  "name": "portofolio-v1",
+  "version": "1.0.0",
   "private": true,
-  "description": "Production-ready portfolio boilerplate: Next.js 16 + Supabase + FSD Architecture",
-  "author": "Your Name",
+  "description": "Personal portfolio built with Next.js 16, Supabase, and Feature-Sliced Design architecture",
+  "author": "Adan",
   "license": "MIT",
   "packageManager": "pnpm@9.15.2",
   "engines": {

@@ -3,8 +3,8 @@ import { QueryProvider } from '@/shared/api/query-provider';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Portfolio Boilerplate',
-  description: 'Production-ready Next.js 16 + Supabase portfolio starter',
+  title: 'Adan - Portfolio',
+  description: 'Personal portfolio showcasing web development projects and professional experience',
 };
 
 export default function RootLayout({
