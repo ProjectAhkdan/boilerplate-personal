@@ -56,8 +56,8 @@
         }
       },
       "suspicious": {
-        "noExplicitAny": "warn",
-        "noArrayIndexKey": "warn"
+        "noExplicitAny": "error",
+        "noArrayIndexKey": "error"
       },
       "a11y": {
         "useKeyWithClickEvents": "error",

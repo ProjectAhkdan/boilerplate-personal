@@ -1,5 +1,5 @@
 {
-  "name": "portofolio-v1",
+  "name": "boilerplate",
   "version": "1.0.0",
   "private": true,
   "description": "Personal portfolio built with Next.js 16, Supabase, and Feature-Sliced Design architecture",
@@ -28,7 +28,7 @@
     "db:migrate": "supabase migration up",
     "db:reset": "supabase db reset",
     "db:seed": "tsx scripts/seed.ts",
-    "prepare": "husky"
+    "prepare": "husky || exit 0"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",

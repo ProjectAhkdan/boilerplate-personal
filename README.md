@@ -1,6 +1,6 @@
-# Adan - Portfolio
+# Boilerplate
 
-Modern personal portfolio website built with Next.js, featuring project showcase and professional experience.
+Modern boilerplate website built with Next.js, featuring project showcase and professional experience.
 
 ## ✨ Tech Stack
 

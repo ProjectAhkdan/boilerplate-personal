@@ -1,0 +1,77 @@
+# CODEOWNERS - Code Ownership and Review Requirements
+#
+# This file defines code ownership for different parts of the repository.
+# When a PR modifies files in these paths, the specified owners will be
+# automatically requested for review.
+#
+# GitHub usernames must be prefixed with @
+# Format: /path/to/code @github-username @team-name
+#
+# More specific rules override general rules defined earlier in the file.
+
+# ============================================================================
+# Global Fallback - Repository Maintainer
+# ============================================================================
+
+* @ProjectAhkdan
+
+# ============================================================================
+# Feature-Sliced Design Architecture Layers
+# ============================================================================
+
+# App Layer - Routing, layouts, page components
+/src/app/ @ProjectAhkdan
+
+# Entities Layer - Business entities, data models, repositories
+/src/entities/ @ProjectAhkdan
+
+# Features Layer - User interactions, forms, authentication
+/src/features/ @ProjectAhkdan
+
+# Shared Layer - Reusable utilities, UI components, API clients
+/src/shared/ @ProjectAhkdan
+
+# Widgets Layer - Composite UI blocks, page sections
+/src/widgets/ @ProjectAhkdan
+
+# ============================================================================
+# Infrastructure and Configuration
+# ============================================================================
+
+# GitHub workflows, CI/CD, templates
+/.github/ @ProjectAhkdan
+
+# Git hooks and commit validation
+/.husky/ @ProjectAhkdan
+/commitlint.config.js @ProjectAhkdan
+/.lintstagedrc.json @ProjectAhkdan
+
+# Package management and dependencies
+/package.json @ProjectAhkdan
+/pnpm-lock.yaml @ProjectAhkdan
+
+# TypeScript configuration
+/tsconfig.json @ProjectAhkdan
+
+# Biome linter and formatter configuration
+/biome.json @ProjectAhkdan
+
+# Environment and deployment configuration
+/.env.example @ProjectAhkdan
+/vercel.json @ProjectAhkdan
+
+# ============================================================================
+# Documentation
+# ============================================================================
+
+/README.md @ProjectAhkdan
+/CONTRIBUTING.md @ProjectAhkdan
+/LICENSE @ProjectAhkdan
+/SECURITY.md @ProjectAhkdan
+
+# ============================================================================
+# Testing Infrastructure
+# ============================================================================
+
+/vitest.config.ts @ProjectAhkdan
+/playwright.config.ts @ProjectAhkdan
