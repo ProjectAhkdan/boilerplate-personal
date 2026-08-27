@@ -37,12 +37,15 @@ The AI must strictly follow these states in order. Do not skip states.
 9. **IMPLEMENTING**: Implement initial requirements based on the architecture plan.
 10. **VALIDATING**: Run tests and checks (Load `references/workflow/validation.md`).
 11. **TRANSFORMING_DOCUMENTATION**: Update README to reflect the ACTUAL project, not the boilerplate (Load `references/workflow/readme-transformation.md`).
-12. **REVIEWING**: Provide final initialization report.
-13. **READY_FOR_COMMAND**: Enter continuous command loop (Load `references/workflow/command-mode.md`).
-14. **COMMAND_ANALYSIS**: Analyze new user prompt.
-15. **COMMAND_IMPLEMENTATION**: Implement user prompt.
-16. **COMMAND_VALIDATION**: Validate after implementation.
-17. **COMPLETED**: Return to `READY_FOR_COMMAND`.
+12. **DOCUMENTATION_REVIEW**: Perform consistency checks and drift detection.
+13. **REVIEWING**: Provide final initialization report.
+14. **READY_FOR_COMMAND**: Enter continuous command loop (Load `references/workflow/command-mode.md`).
+15. **COMMAND_ANALYSIS**: Analyze new user prompt.
+16. **COMMAND_IMPLEMENTATION**: Implement user prompt.
+17. **COMMAND_VALIDATION**: Validate after implementation.
+18. **DOCUMENTATION_IMPACT_ANALYSIS**: Check if user command changes affect documentation.
+19. **UPDATE_DOCUMENTATION**: Update README and docs if needed.
+20. **COMPLETED**: Return to `READY_FOR_COMMAND`.
 
 ## Boilerplate Audit Rules
 Before modifying anything, audit the directory:
