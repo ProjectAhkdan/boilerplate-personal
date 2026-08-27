@@ -56,48 +56,11 @@ CREATE POLICY "Public read access for published projects"
   USING (status = 'published');
 
 -- RLS Policy: Authenticated users (owner) full access
--- Note: Untuk boilerplate ini, semua authenticated user = owner
--- Di production, tambahkan user_id column dan check ownership
+-- Note: Single-user portfolio - all authenticated users have full access
+-- For multi-user scenarios, add user_id column and ownership checks
 CREATE POLICY "Authenticated users full access"
   ON public.projects
   FOR ALL
   TO authenticated
   USING (true)
   WITH CHECK (true);
-
--- Insert sample placeholder data
-INSERT INTO public.projects (title, slug, description, content, excerpt, featured_image_url, tags, status, published_at)
-VALUES
-  (
-    'Portfolio Boilerplate',
-    'portfolio-boilerplate',
-    'A production-ready Next.js 16 + Supabase starter template with Feature-Sliced Design architecture.',
-    '# Portfolio Boilerplate\n\nThis is a sample project demonstrating the boilerplate capabilities.\n\n## Features\n\n- Next.js 16 with App Router\n- Supabase for backend\n- TypeScript strict mode\n- Tailwind CSS v4\n- FSD architecture\n\n## Getting Started\n\nClone the repository and follow the setup instructions in README.md.',
-    'A production-ready Next.js 16 + Supabase starter template with Feature-Sliced Design architecture.',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&auto=format&fit=crop',
-    ARRAY['Next.js', 'Supabase', 'TypeScript', 'Tailwind CSS'],
-    'published',
-    NOW()
-  ),
-  (
-    'E-Commerce Platform',
-    'ecommerce-platform',
-    'A modern e-commerce solution built with cutting-edge technologies.',
-    '# E-Commerce Platform\n\nFull-featured e-commerce platform with payment integration.\n\n## Tech Stack\n\n- React 19\n- Node.js\n- PostgreSQL\n- Stripe',
-    'A modern e-commerce solution built with cutting-edge technologies.',
-    'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&auto=format&fit=crop',
-    ARRAY['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-    'published',
-    NOW() - INTERVAL '7 days'
-  ),
-  (
-    'Task Management App',
-    'task-management-app',
-    'Collaborative task management tool for remote teams.',
-    '# Task Management App\n\nStreamline your team''s workflow with this intuitive task manager.\n\n## Features\n\n- Real-time collaboration\n- Kanban boards\n- Time tracking\n- Reporting',
-    'Collaborative task management tool for remote teams.',
-    'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop',
-    ARRAY['React', 'WebSocket', 'MongoDB'],
-    'draft',
-    NULL
-  );

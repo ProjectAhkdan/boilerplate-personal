@@ -1,11 +1,25 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Pre-push validation gate
+#
+# This hook runs typecheck, tests, and build before allowing push.
+# 
+# Rationale:
+# - typecheck: Fast, catches type errors before CI
+# - test: Ensures unit tests pass locally
+# - build: Validates production bundle (currently required locally because 
+#         it provides immediate feedback and guarantees the code can ship)
+#
+# Once CI is mature and trusted, consider moving 'build' to CI-only to speed up
+# local pushes, keeping only typecheck + test here. However, preserve developer
+# safety first - do not remove 'build' unless CI reliably enforces it.
+
 echo "🔍 Running typecheck..."
-npm run typecheck
+pnpm typecheck
 
 echo "🧪 Running tests..."
-npm run test
+pnpm test
 
 echo "🔨 Running build check..."
-npm run build
+pnpm build

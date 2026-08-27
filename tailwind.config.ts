@@ -17,7 +17,6 @@ const config: Config = {
     './src/entities/**/*.{js,ts,jsx,tsx,mdx}',
     './src/features/**/*.{js,ts,jsx,tsx,mdx}',
     './src/widgets/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/views/**/*.{js,ts,jsx,tsx,mdx}',
     // Pages Router (if exists)
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
